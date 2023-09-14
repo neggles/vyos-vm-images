@@ -14,9 +14,7 @@
   shell: mount --bind /dev {{ vyos_install_root }}/dev &&
          mount --bind /proc {{ vyos_install_root }}/proc &&
          mount --bind /sys {{ vyos_install_root }}/sys &&
-         mount --bind {{ vyos_write_root }} {{ vyos_install_root }}/boot 
-  args:
-    warn: no
+         mount --bind {{ vyos_write_root }} {{ vyos_install_root }}/boot
 
 - name: Create efi directory
   become: true
